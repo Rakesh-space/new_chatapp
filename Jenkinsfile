@@ -8,7 +8,7 @@ agent any
  }
  stage('Deploy') {
   steps {
-   sh 'ssh -i /var/lib/jenkins/secrets/myawskey.pem ubuntu@3.231.230.130 sudo systemctl restart gunicorn'
+   sh 'ssh -i /var/lib/jenkins/myawskey.pem ubuntu@3.231.230.130 sudo systemctl restart gunicorn'
   }
  }
 }
